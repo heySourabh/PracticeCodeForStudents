@@ -1,7 +1,7 @@
 LIBS  = -lm
 CFLAGS = -Wall
 
-SRC=$(wildcard *.c)
+SRC=$(wildcard ./src/*.c)
 INC=./include
 
 program.exe: $(SRC)
