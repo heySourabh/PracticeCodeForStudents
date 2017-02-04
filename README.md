@@ -1,5 +1,5 @@
 # PracticeCodeForStudents
-Some code for students to experiment with, and code the solvers taught in the class.
+Some code for students to experiment with, and program the solvers taught in the class.
 
 To understand the code start by looking at the algorithm (in comments) written in [main.c](https://github.com/heySourabh/PracticeCodeForStudents/blob/master/src/main.c)  file.
 
