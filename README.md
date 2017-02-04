@@ -5,7 +5,7 @@ To understand the code start by looking at the algorithm (in comments) written i
 
 This folder contains a [*`Makefile`*](https://github.com/heySourabh/PracticeCodeForStudents/blob/master/Makefile), so running `make` at the command line will compile the code. If you do not have [make-tools](https://en.wikipedia.org/wiki/Make_(software)) installed, then you can run the following command:
 
-`gcc -Wall *.c -I./include -lm -o output.exe`
+`gcc -Wall ./src/*.c -I./include -lm -o output.exe`
 
 I have tested the code only on Ubuntu 16.04.
 Nevertheless, on other distributions of Linux it should have no problems.
