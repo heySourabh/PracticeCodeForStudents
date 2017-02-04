@@ -10,7 +10,7 @@ If you do not have make-tools installed, then you can run the following command:
 `gcc -Wall *.c -I./include -lm -o output.exe`
 
 I have tested the code only on Ubuntu 16.04.
-On other distributions of Linux it should have no problems.
+Nevertheless, on other distributions of Linux it should have no problems.
 
 For Windows using Visual Studio will most probably work, as the code uses only standard libraries.
 
