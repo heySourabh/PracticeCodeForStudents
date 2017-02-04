@@ -12,3 +12,7 @@ Nevertheless, on other distributions of Linux it should have no problems.
 
 For Windows using Visual Studio will most probably work, as the code uses only standard libraries.
 
+Here is a plot of a solution genrated by the code (the plotting program is included):
+
+![Plot](https://github.com/heySourabh/PracticeCodeForStudents/blob/master/property_distribution_plots.png?raw=true)
+
