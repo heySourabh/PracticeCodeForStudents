@@ -7,19 +7,31 @@
 
 #include "config.h"
 #include "data.h"
+#include "TimeIntegrator.h"
 
+double coeffs_U[3][3] = {
+    {1.0, 0.0, 0.0},
+    {3.0 / 4.0, 1.0 / 4.0, 0.0},
+    {1.0 / 3.0, 0.0, 2.0 / 3.0}
+};
+double coeffs_F[3] = {
+    1.0, 1.0 / 4.0, 2.0 / 3.0
+};
 
 void updateCells(Cell cells[], int rkStep, double dt) {
-    // TODO: Higher order time integration
     // assuming dx is uniform
     double dx = cells[0].dx;
-    
+
     int i;
     for (i = NUM_GHOST_CELLS; i < NUM_CELLS + NUM_GHOST_CELLS; i++) {
         int var;
         for (var = 0; var < NUM_VARS; var++) {
-            cells[i].U[1][var] 
-                    = cells[i].U[0][var] - dt / dx *  cells[i].totalFlux[var];
+            int coeff;
+            cells[i].U[rkStep + 1][var] = 0.0;
+            for (coeff = 0; coeff < NUM_RK_STEPS; coeff++) {
+                cells[i].U[rkStep + 1][var] += coeffs_U[rkStep][coeff] * cells[i].U[coeff][var];
+            }
+            cells[i].U[rkStep + 1][var] += (-dt / dx) * coeffs_F[rkStep] * cells[i].totalFlux[var];
         }
     }
 }

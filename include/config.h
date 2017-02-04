@@ -17,10 +17,10 @@ extern "C" {
 #define MIN_X (-0.5)
 #define MAX_X (+0.5)
 
-#define CFL 0.5
+#define CFL 0.8
 #define STOPPING_TIME 5.5e-4
 
-#define NUM_RK_STEPS 1
+#define NUM_RK_STEPS 3
 #define MAX_TIME_ITER 1000000
 
 #ifdef	__cplusplus
