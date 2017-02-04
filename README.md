@@ -3,9 +3,7 @@ Some code for students to experiment with, and program the solvers taught in the
 
 To understand the code start by looking at the algorithm (in comments) written in [main.c](https://github.com/heySourabh/PracticeCodeForStudents/blob/master/src/main.c)  file.
 
-This folder contains a Makefile, so running "make" at the command line will compile the code.
-
-If you do not have make-tools installed, then you can run the following command:
+This folder contains a Makefile, so running "make" at the command line will compile the code. If you do not have make-tools installed, then you can run the following command:
 
 `gcc -Wall *.c -I./include -lm -o output.exe`
 
