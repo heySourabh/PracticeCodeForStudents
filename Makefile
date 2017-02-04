@@ -3,6 +3,7 @@ CFLAGS = -Wall
 
 SRC=$(wildcard ./src/*.c)
 INC=./include
+HDR=$(wildcard ./include/*h)
 
-program.exe: $(SRC)
-	gcc -o $@ $^ $(CFLAGS) -I$(INC) $(LIBS)
+program.exe: $(SRC) $(HDR)
+	gcc -o $@ $(SRC) $(CFLAGS) -I$(INC) $(LIBS)
