@@ -20,18 +20,18 @@ void writeSolutionToFile(Cell cells[]) {
     FILE* file = fopen(fileName, "w");
 
     char** primVarNames = malloc(NUM_VARS * sizeof (char*));
-    for (int n = 0; n < NUM_VARS; n++) {
-        primVarNames[n] = malloc(MAX_VAR_NAME_LENGTH * sizeof (char));
+    int var;
+    for (var = 0; var < NUM_VARS; var++) {
+        primVarNames[var] = malloc(MAX_VAR_NAME_LENGTH * sizeof (char));
     }
     getPrimitiveVariableNames(primVarNames);
-    
+
     // Write variable names as header of the file
     fprintf(file, "%-20s", "x");
-    int var;
     for (var = 0; var < NUM_VARS; var++) {
         fprintf(file, "%-20s", primVarNames[var]);
     }
-    
+
     // Write cell data
     const int RK_STEP = 0;
     int i;
@@ -45,9 +45,9 @@ void writeSolutionToFile(Cell cells[]) {
         }
     }
 
-    
+
     fclose(file);
-    
+
     fileIndex++;
     printf("done.\n");
 }
