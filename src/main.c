@@ -26,7 +26,6 @@
  */
 int main(int argc, char** argv) {
 
-    printf("\nThe beginnings of an awesome CFD code for students practice!!");
     /* ========================== Start of algorithm ============================ */
     // Steps of the complete algorithm:
     // Create cell array, Set dx, cx
