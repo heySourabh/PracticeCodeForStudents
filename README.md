@@ -7,7 +7,7 @@ This folder contains a [*`Makefile`*](https://github.com/heySourabh/PracticeCode
 
 `gcc -Wall ./src/*.c -I./include -lm -o output.exe`
 
-I have tested the code only on Ubuntu 16.04.
+I have tested the code only on Ubuntu 14.04 and Ubuntu 16.04.
 Nevertheless, on other distributions of Linux it should have no problems.
 
 For Windows using Visual Studio will most probably work, as the code uses only standard libraries.
